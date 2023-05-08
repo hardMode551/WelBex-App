@@ -154,8 +154,6 @@ section {
       width: 211px;
       height: 211px;
       left: 19px;
-
-      // display: none;
     }
   }
 
@@ -171,13 +169,12 @@ section {
     border-radius: 100%;
 
     background: radial-gradient(
-        64% 64% at 27.25% 26.5%,
-        rgba(255, 208, 208, 0.48) 0%,
-        rgba(212, 93, 93, 0.248) 59.67%,
-        rgba(167, 49, 49, 0.264) 78.59%,
-        rgba(130, 25, 25, 0.232) 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      64% 64% at 27.25% 26.5%,
+      rgba(255, 208, 208, 0.48) 0%,
+      rgba(212, 93, 93, 0.248) 59.67%,
+      rgba(167, 49, 49, 0.264) 78.59%,
+      rgba(130, 25, 25, 0.232) 100%
+    );
     box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
     filter: blur(2.5px);
     backdrop-filter: blur(2px);
