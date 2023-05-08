@@ -1,0 +1,190 @@
+@import './mixin.scss';
+
+section {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 94px;
+
+  position: relative;
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+
+    margin-top: 40px;
+  }
+
+  .info {
+    text-align: left;
+
+    width: 275px;
+
+    @media screen and (max-width: 420px) {
+      margin: 0 auto;
+      padding-bottom: 45px;
+
+      width: 311px;
+    }
+
+    h1 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 58px;
+
+      margin: 0;
+
+      @media screen and (max-width: 420px) {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+    b {
+      font-weight: 900;
+      font-size: 48px;
+
+      @include gradient-text;
+
+      @media screen and (max-width: 420px) {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+
+      margin-top: 30px;
+      @include grey-text;
+    }
+  }
+
+  .consulting {
+    text-align: right;
+
+    width: 311px;
+
+    @media screen and (max-width: 420px) {
+      margin: 0 auto;
+
+      text-align: left;
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+
+      margin: 0;
+      b {
+        @include gradient-text;
+      }
+    }
+
+    .gifts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 10px;
+
+      margin-top: 40px;
+
+      h1 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      p {
+        @include grey-text;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    button {
+      width: 262px;
+      height: 61px;
+
+      margin-top: 60px;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+
+      background: #4077f3;
+
+      &:hover {
+        background: #4076f3d0;
+      }
+
+      &:active {
+        background: #4076f3d0;
+        transform: translateY(2px);
+      }
+
+      @media screen and (max-width: 420px) {
+        width: inherit;
+      }
+    }
+  }
+
+  .decoreLight {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: -102px;
+    top: 0;
+
+    z-index: -1;
+
+    border-radius: 100%;
+
+    background: #961a1a;
+    opacity: 0.5;
+    filter: blur(196px);
+
+    @media screen and (max-width: 320px) {
+      width: 211px;
+      height: 211px;
+      left: 19px;
+
+      // display: none;
+    }
+  }
+
+  .decoreCircle {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 651px;
+    top: 407px;
+
+    z-index: -1;
+
+    border-radius: 100%;
+
+    background: radial-gradient(
+        64% 64% at 27.25% 26.5%,
+        rgba(255, 208, 208, 0.48) 0%,
+        rgba(212, 93, 93, 0.248) 59.67%,
+        rgba(167, 49, 49, 0.264) 78.59%,
+        rgba(130, 25, 25, 0.232) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+    filter: blur(2.5px);
+    backdrop-filter: blur(2px);
+
+    @media screen and (max-width: 900px) {
+      left: 151px;
+      top: 407px;
+    }
+  }
+}
